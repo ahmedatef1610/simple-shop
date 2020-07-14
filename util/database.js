@@ -1,6 +1,6 @@
 const mongodb = require('mongodb')
 const MongoClient = mongodb.MongoClient;
-const uri = "mongodb+srv://ahmed:1610@cluster0-rrcal.mongodb.net/shop?retryWrites=true&w=majority";
+const uri = "";
 let db;
 // const client = new MongoClient(uri, {
 //     useNewUrlParser: true
