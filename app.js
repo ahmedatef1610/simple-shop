@@ -62,7 +62,6 @@ app.use(express.static(path.join(__dirname, 'public')));
 app.use('/images',express.static(path.join(__dirname, 'images')));
 
 const store = new MongoDBStore({
-    uri: 'mongodb+srv://ahmed:1610@cluster0-rrcal.mongodb.net/shop?retryWrites=true&w=majority',
     collection: 'sessions'
 });
 
@@ -130,7 +129,6 @@ app.use((error, req, res, next) => {
     // });
 })
 /****************************/
-const uri = "mongodb+srv://ahmed:1610@cluster0-rrcal.mongodb.net/shop?retryWrites=true&w=majority";
 mongoose.connect(uri)
     .then(() => {
         app.listen(port, () => {
