@@ -5,7 +5,7 @@ const path = require('path');
 const pdfDocument = require('pdfkit');
 const ITEMS_PER_PAGE = 4;
 
-const stripe = require('stripe')('sk_test_tm5jd4IYASIRKsKi9LnE0iqq00yqqgpthH');
+const stripe = require('stripe')('key');
 /*****************/
 exports.getIndex = (req, res, next) => {
     res.render('shop/index', {
