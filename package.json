@@ -28,7 +28,7 @@
     "nodemailer-sendgrid-transport": "^0.2.0",
     "nodemon": "^1.19.2",
     "pdfkit": "^0.10.0",
-    "pug": "^2.0.4",
+    "pug": "^3.0.1",
     "sequelize": "^5.18.4",
     "stripe": "^7.10.0"
   }
