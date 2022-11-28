@@ -1,6 +1,7 @@
 const express = require('express');
 const bodyParser = require('body-parser')
 const path = require('path')
+require('dotenv').config()
 
 const mongoose = require('mongoose');
 const User = require('./models/user');
@@ -62,6 +63,7 @@ app.use(express.static(path.join(__dirname, 'public')));
 app.use('/images',express.static(path.join(__dirname, 'images')));
 
 const store = new MongoDBStore({
+    uri: process.env.DB_URL,
     collection: 'sessions'
 });
 
@@ -129,6 +131,7 @@ app.use((error, req, res, next) => {
     // });
 })
 /****************************/
+const uri = process.env.DB_URL;
 mongoose.connect(uri)
     .then(() => {
         app.listen(port, () => {
